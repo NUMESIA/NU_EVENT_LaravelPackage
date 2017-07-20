@@ -1,2 +1,2 @@
-# NU_EVENTS
+# NU_EVENTS_LaravelPackage
 Gestionnaire d'évènements
