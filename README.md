@@ -1,7 +1,7 @@
 # NU_EVENTS_LaravelPackage
 Laravel package that helps to send events across components
 
-This laravel auth package is a private package so we can't just require it using composer, that's why we have to add a vcs repository to tell
+This laravel event package is a private package so we can't just require it using composer, that's why we have to add a vcs repository to tell
 composer from which url the package must be loaded.
 
     "repositories": [
