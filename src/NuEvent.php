@@ -21,13 +21,13 @@ class NuEvent
      */
 
     /**
-     * Dispache event to selected components
+     * Dispatch event to selected components
      *
      * @param      <string>  $eventName   The event name
      * @param      <string>  $eventData   The event data
      * @param      <mixed>   $components  The components
      */
-    public function dispache($eventName, $eventData, $components = null)
+    public function dispatch($eventName, $eventData, $components = null)
     {
         if (!$components) {
             return $this->broadcast($eventName, $eventData);

@@ -10,6 +10,6 @@ if (!function_exists('nuEvent')) {
      */
     function nuEvent($eventName, $eventData, $components = null)
     {
-        \NuEvent::dispache($eventName, $eventData, $components);
+        \NuEvent::dispatch($eventName, $eventData, $components);
     }
 }

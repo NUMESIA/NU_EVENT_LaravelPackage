@@ -67,13 +67,13 @@ NuEvent::emit($componentName, $eventName, $eventData)
 NuEvent::broadcast($eventName, $eventData)
 
 /**
- * Dispache event to selected components
+ * Dispatch event to selected components
  *
  * @param      <string>  $eventName   The event name
  * @param      <string>  $eventData   The event data
  * @param      <mixed>   $components  The components
  */
-NuEvent::dispache($eventName, $eventData, $components = null)
+NuEvent::dispatch($eventName, $eventData, $components = null)
 ```
 
 > /!\ When you send an event, NuEvent add automatically a suffix '**nuEvents:**' to your event name
