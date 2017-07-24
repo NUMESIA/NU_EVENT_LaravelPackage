@@ -1,7 +1,5 @@
 <?php
 
-use ;
-
 if (!function_exists('nuEvent')) {
     /**
      * Get Settings.
