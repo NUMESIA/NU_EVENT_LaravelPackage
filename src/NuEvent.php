@@ -74,8 +74,11 @@ class NuEvent
             'name' => $eventName,
             'data' => $eventData,
         ];
+        $url = config('nuevent.components.' . $componentName);
+        $url = ends_with($url, '/') ? $url : $url.'/';
+        $url .= '__nuevent';
 
-        $this->request(config('nuevent.components.' . $componentName), $data);
+        $this->request($url, $data);
     }
 
     /**
@@ -86,15 +89,18 @@ class NuEvent
      *
      * @return     <type>  ( description_of_the_return_value )
      */
-    protected function request($url, $data)
+    protected function request($url, $params)
     {
-        $data['nuEventToken'] = env('NUEVENT_TOKEN');
+        $params['nuEventToken'] = env('NUEVENT_TOKEN');
 
         $client = new HttpClient;
 
-        $data['headers'] = [
-            'X-Requested-With' => 'XMLHttpRequest',
-            'Content-Type'     => 'application/x-www-form-urlencoded',
+        $data = [
+            'headers' => [
+                'X-Requested-With' => 'XMLHttpRequest',
+                'Content-Type'     => 'application/x-www-form-urlencoded',
+            ],
+            'form_params' => $params,
         ];
 
         try {
@@ -102,7 +108,7 @@ class NuEvent
             return json_decode($response->getBody()->getContents());
         } catch (\Exception $e) {
             $response = $e->getResponse();
-            return $response->getBody();
+            \Log::info(["Error in " . __FILE__ => $response->getBody()->getContents()]);
         }
     }
 }
