@@ -1,6 +1,7 @@
 <?php
 
 namespace Numesia\NuEvent;
+use GuzzleHttp\Client as HttpClient;
 
 class NuEvent
 {
