@@ -2,11 +2,11 @@
 
 if (!function_exists('nuEvent')) {
     /**
-     * Get Settings.
+     * Send an event to components
      *
-     * @param string $key
-     *
-     * @return string/Setting
+     * @param      <string>  $eventName   The event name
+     * @param      <string>  $eventData   The event data
+     * @param      <mixed>   $components  The components
      */
     function nuEvent($eventName, $eventData, $components = null)
     {
