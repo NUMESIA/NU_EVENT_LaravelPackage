@@ -33,7 +33,11 @@ class NuEvent
         }
 
         if (!is_array($components)) {
-            return $this->emit('');
+            return $this->emit($components, $eventName, $eventData);
+        }
+
+        foreach($components as $component) {
+            $this->emit($component, $eventName, $eventData);
         }
     }
 
