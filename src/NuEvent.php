@@ -37,9 +37,13 @@ class NuEvent
             return $this->emit($components, $eventName, $eventData);
         }
 
+        $response = [];
+
         foreach($components as $component) {
-            $this->emit($component, $eventName, $eventData);
+            $response[$component] = $this->emit($component, $eventName, $eventData);
         }
+
+        return $response;
     }
 
     /**
@@ -50,9 +54,13 @@ class NuEvent
      */
     public function broadcast($eventName, $eventData)
     {
+        $response = [];
+
         foreach(config('nuevent.components') as $componentName => $url) {
-            $this->emit($componentName, $eventName, $eventData);
+            $response[$componentName] = $this->emit($componentName, $eventName, $eventData);
         }
+
+        return $response;
     }
 
     /*
@@ -78,7 +86,7 @@ class NuEvent
         $url = ends_with($url, '/') ? $url : $url.'/';
         $url .= '__nuevent';
 
-        $this->request($url, $data);
+        return $this->request($url, $data);
     }
 
     /**

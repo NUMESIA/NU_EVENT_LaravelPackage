@@ -8,8 +8,12 @@ if (!function_exists('nuEvent')) {
      * @param      <string>  $eventData   The event data
      * @param      <mixed>   $components  The components
      */
-    function nuEvent($eventName, $eventData, $components = null)
+    function nuEvent($eventName, $eventData, $components = null, $callback = null)
     {
-        \NuEvent::dispatch($eventName, $eventData, $components);
+        $response = \NuEvent::dispatch($eventName, $eventData, $components, $callback);
+
+        if ($callback) {
+            $callback($response);
+        }
     }
 }
