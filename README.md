@@ -38,11 +38,12 @@ NuEvent comes with a global function nuEvent() which help you te send easily eve
     /**
      * Send an event to components
      *
-     * @param      <string>  $eventName   The event name
-     * @param      <string>  $eventData   The event data
-     * @param      <mixed>   $components  The components
+     * @param      <string>     $eventName   The event name
+     * @param      <string>     $eventData   The event data
+     * @param      <mixed>      $components  The components
+     * @param      <closure>    $callback    The callback
      */
-    function nuEvent($eventName, $eventData, $components = null)
+    function nuEvent($eventName, $eventData, $components = null, $callback)
 ```
 > $components can be a string (bpm), an array ['bpm', 'cms'] or nothing to broadcast to all components
 
