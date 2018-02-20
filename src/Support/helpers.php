@@ -10,7 +10,7 @@ if (!function_exists('nuEvent')) {
      */
     function nuEvent($eventName, $eventData, $components = null, $callback = null)
     {
-        $response = \NuEvent::dispatch($eventName, $eventData, $components, $callback);
+        $response = \NuEvent::dispatch($eventName, $eventData, $components);
 
         if ($callback) {
             $callback($response);
