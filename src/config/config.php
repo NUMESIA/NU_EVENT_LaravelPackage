@@ -9,12 +9,12 @@ return [
     */
 
     'components' => [
-        "bpm" => env("INTELLIGENSIA_BPM_URL"),
-        "agenda" => env("INTELLIGENSIA_AGENDA_URL"),
-        "book" => env("INTELLIGENSIA_BOOK_URL"),
-        "cms" => env("INTELLIGENSIA_CMS_URL"),
-        "tracker" => env("INTELLIGENSIA_TRACKER_URL"),
-        "auth" => env("INTELLIGENSIA_AUTH_URL"),
+        "bpm" => INTERNAL_BPM_URL,
+        "agenda" => INTERNAL_AGENDA_URL,
+        "book" => INTERNAL_BOOK_URL,
+        "cms" => INTERNAL_CMS_URL,
+        "tracker" => INTERNAL_TRACKER_URL,
+        "auth" => INTERNAL_AUTH_URL,
     ],
 
 ];
