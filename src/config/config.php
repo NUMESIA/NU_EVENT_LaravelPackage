@@ -9,12 +9,12 @@ return [
     */
 
     'components' => [
-        "bpm" => INTERNAL_BPM_URL,
-        "agenda" => INTERNAL_AGENDA_URL,
-        "book" => INTERNAL_BOOK_URL,
-        "cms" => INTERNAL_CMS_URL,
-        "tracker" => INTERNAL_TRACKER_URL,
-        "auth" => INTERNAL_AUTH_URL,
+        "bpm"     => INTERNAL_URL_BPM,
+        "agenda"  => INTERNAL_URL_AGENDA,
+        "book"    => INTERNAL_URL_BOOK,
+        "cms"     => INTERNAL_URL_CMS,
+        "tracker" => INTERNAL_URL_TRACKER,
+        "auth"    => INTERNAL_URL_AUTH,
     ],
 
 ];
