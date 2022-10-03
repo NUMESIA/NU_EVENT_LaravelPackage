@@ -1,7 +1,7 @@
 {
     "name": "numesia/laravel-events",
     "description": "Laravel package that helps to send events across components",
-    "license": "Private",
+    "license": "MIT",
     "require": {
         "php": ">=5.5.9",
         "guzzlehttp/guzzle": "^6.2 || ^7.2"
