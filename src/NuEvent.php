@@ -109,6 +109,7 @@ class NuEvent
                 'Content-Type'     => 'application/x-www-form-urlencoded',
             ],
             'form_params' => $params,
+            'verify' => false
         ];
 
         try {
