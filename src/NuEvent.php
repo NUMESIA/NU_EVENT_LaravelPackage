@@ -115,8 +115,10 @@ class NuEvent
             $response = $client->request('POST', $url, $data);
             return json_decode($response->getBody()->getContents());
         } catch (\Exception $e) {
-            $response = $e->getResponse();
-            \Log::info(["Error in " . __FILE__ => $response->getBody()->getContents()]);
+            \Log::info(["NuEvent Error in " . __FILE__ => [
+                'url' => $url,
+                'params' => $params
+            ]]);
         }
     }
 }
